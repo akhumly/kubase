@@ -7,6 +7,18 @@
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
 		"ghcr.io/devcontainers-community/npm-features/typescript:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"rangav.vscode-thunder-client",
+				"GitHub.copilot",
+                "prisma.prisma",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
