@@ -3,6 +3,15 @@ FROM mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm
 #Install NestJS CLI globally
 RUN npm install -g @nestjs/cli
 
+# Install Cypress dependencies
+RUN apt-get update && apt-get install -y \
+    libnss3 \
+    libgtk-3-0 \
+    libxss1 \
+    libgconf-2-4 \
+    libasound2 \
+    xvfb
+
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
