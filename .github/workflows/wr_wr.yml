@@ -41,7 +41,6 @@ jobs:
         run: |
           npm install
           npm run build 
-#         npm run test --if-present
         
        # Start NestJS server in the background
       - name: Start NestJS server
@@ -115,4 +114,8 @@ jobs:
           app-name: 'wr'
           slot-name: 'Production'
           package: .
+
+      - name: Start NestJS Application
+        working-directory: ./backend
+        run: npm start  # Now runs "node dist/main" as per updated package.json
           
