@@ -8,3 +8,5 @@ npm install prisma @prisma/client
 
 
 npm run start:dev
+
+CI TEST
