@@ -40,6 +40,13 @@ jobs:
         working-directory: ./backend   # Set to the correct folder
         run: npm install
 
+      # Start NestJS server in the background
+      - name: Start NestJS server
+        working-directory: ./backend
+        run: npm run start &
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_db
+
       - name: Set up Prisma
         working-directory: ./backend   # Set to the correct folder
         run: npx prisma migrate deploy --schema=prisma/schema.prisma
@@ -51,6 +58,11 @@ jobs:
         run: npm test
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_db
+
+      # Wait for the server to be up and running before starting Cypress
+      - name: Wait for server to be ready
+        run: |
+          npx wait-on http://localhost:3000
 
       - name: Run Cypress E2E Tests
         working-directory: ./backend   # Set to the correct folder
