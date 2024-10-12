@@ -19,5 +19,5 @@
     "noFallthroughCasesInSwitch": false,
     "types": ["cypress"]
   },
-  "include": ["**/*.ts", "cypress/**/*.ts"]
+  "include": ["**/*.ts", "cypress/**/*.ts","jest.config.js"]
 }

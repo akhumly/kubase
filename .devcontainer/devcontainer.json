@@ -19,7 +19,7 @@
                 "dbaeumer.vscode-eslint"
 			]
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -30,7 +30,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "yarn install",
-
+	"postCreateCommand": "cd backend && npm install && npx cypress install"
 	// Configure tool-specific properties.
 	// "customizations": {},
 
