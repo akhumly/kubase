@@ -116,7 +116,7 @@ jobs:
         with:
           app-name: 'wr'
           slot-name: 'Production'
-          package: .
+          package: ./wwwroot   # Deploy the unzipped files (dist, package.json)
 
 
           
