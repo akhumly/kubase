@@ -116,6 +116,5 @@ jobs:
           package: .
 
       - name: Start NestJS Application
-        working-directory: ./backend
         run: npm start  # Now runs "node dist/main" as per updated package.json
           
