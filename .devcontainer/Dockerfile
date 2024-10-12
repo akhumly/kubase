@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm
+# FROM mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm
+FROM mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye
 
 #Install NestJS CLI globally
 RUN npm install -g @nestjs/cli
