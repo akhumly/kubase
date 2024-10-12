@@ -34,20 +34,24 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22'
+          node-version: '20'
 
       - name: Install dependencies
+        working-directory: ./backend   # Set to the correct folder
         run: npm install
 
       - name: Set up Prisma
+        working-directory: ./backend   # Set to the correct folder
         run: npx prisma migrate deploy --schema=prisma/schema.prisma
 
       - name: Run Unit Tests
+        working-directory: ./backend   # Set to the correct folder
         run: npm test
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_db
 
       - name: Run Cypress E2E Tests
+        working-directory: ./backend   # Set to the correct folder
         run: npx cypress run
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_db
