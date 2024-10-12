@@ -115,6 +115,5 @@ jobs:
           slot-name: 'Production'
           package: .
 
-      - name: Start NestJS Application
-        run: npm start  # Now runs "node dist/main" as per updated package.json
+
           
