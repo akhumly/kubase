@@ -17,7 +17,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "types": ["cypress", "jest"],
+    "types": [""],
   },
-  "include": ["**/*.ts", "cypress/**/*.ts","jest.config.ts"]
+  "include": ["**/*.ts"]
 }

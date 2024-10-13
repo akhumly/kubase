@@ -1,16 +1,19 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "target": "es2017",
-      "noEmit": true,
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "types": ["jest","node"]  // This is critical to add Jest types here
-    },
-    "include": [
-      "**/*.spec.ts",
-      "**/*.d.ts"
-    ]
-  }
-  
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["jest", "node"]  // Make sure only "jest" types are included here
+  },
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "cypress"  // Exclude Cypress types from Jest test files
+  ]
+}
