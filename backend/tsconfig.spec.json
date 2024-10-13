@@ -6,7 +6,7 @@
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
-      "types": ["node", "jest"]  // This is critical to add Jest types here
+      "types": ["jest","node"]  // This is critical to add Jest types here
     },
     "include": [
       "**/*.spec.ts",

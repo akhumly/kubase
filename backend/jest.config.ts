@@ -1,3 +1,4 @@
+// jest.config.ts
 import { Config } from '@jest/types';
 import * as dotenv from 'dotenv';
 
@@ -7,7 +8,7 @@ dotenv.config({ path: '.env.test' });
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  moduleFileExtensions: ['js', 'json', 'ts'],
+  moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   rootDir: 'src',
   testRegex: '.*\\.spec\\.ts$',
   transform: {
@@ -15,7 +16,7 @@ const config: Config.InitialOptions = {
   },
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: '../coverage',
-  setupFiles: ['dotenv/config'], // Add this line to load .env files
+  setupFiles: ['dotenv/config'],
 };
 
 export default config;
