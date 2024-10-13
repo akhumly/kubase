@@ -76,7 +76,7 @@ jobs:
       # Create a zip file including only the dist directory and package.json, package-lock.json
       - name: Zip artifact for deployment
         working-directory: ./backend
-        run: zip -r release.zip dist/ package.json package-lock.json
+        run: zip -r release.zip dist/ node_modules/ package.json package-lock.json
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -101,7 +101,7 @@ jobs:
 
       - name: Unzip artifact for deployment
       # run: unzip release.zip
-        run: unzip release.zip -d wwwroot   # Unzip the required files into wwwroot
+        run: unzip release.zip -d  # Unzip the required files into wwwroot
       
       - name: Login to Azure
         uses: azure/login@v2
