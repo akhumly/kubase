@@ -2,9 +2,7 @@ To start new dev environemnt
 cd backend
 npm install
 
-npm install dotenv
-
-npm install prisma @prisma/client
+npx prisma migrate dev --name init
 
 
 npm run start:dev
