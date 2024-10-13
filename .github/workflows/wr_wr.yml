@@ -101,7 +101,7 @@ jobs:
 
       - name: Unzip artifact for deployment
       # run: unzip release.zip
-        run: unzip release.zip -d  # Unzip the required files into wwwroot
+        run: unzip release.zip  # Unzip the required files into wwwroot
       
       - name: Login to Azure
         uses: azure/login@v2
