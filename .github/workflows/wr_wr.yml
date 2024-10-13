@@ -106,17 +106,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5167B3735C7647D6A6248866EDB06D04 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9AD74F46DF764017A917D84976A34250 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BA496C1D77EE476DA26298334C8B3D41 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7F6837F551EE4CA991E622AC54CEE015 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9F55C716238D42139DAB91DD6FD3E423 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_58F0837E0DFF4C4B8A5623BF8FB82D94 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'wr'
+          app-name: 'reporter'
           slot-name: 'Production'
-          package: ./wwwroot   # Deploy the unzipped files (dist, package.json)
-
-
+          package: .
           
